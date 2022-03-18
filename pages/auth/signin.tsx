@@ -8,8 +8,6 @@ import React from 'react';
 import Image from 'next/image'
 
 function signin(props) {
-  console.log(props);
-
   const schema = yup
     .object({
       firstName: yup.string().required("Le prénom est requis"),
@@ -58,7 +56,7 @@ function signin(props) {
         <p></p>
       </aside>
       <main className="text-white grid bg-blue-900 grid-cols-1 content-center col-span-5 md:col-span-4 md:bg-slate-200 md:text-black">
-        <article className="w-9/12 mx-auto md:w-1/4">
+        <article className="w-9/12 mx-auto md:w-2/4">
           <div className='font-black text-6xl text-center mb-5 md:hidden'>zeeven</div>
           <h1 className="font-900 font-bold text-4xl text-center text-white md:text-blue-900">
             Connectez vous
@@ -78,7 +76,7 @@ function signin(props) {
                     <FontAwesomeIcon
                       icon={getIcon(provider.id)}
                       color={getIconColor(provider.id)}
-                      size="2x"
+                      size="3x"
                     />
                   </button>
                 ))}
@@ -91,7 +89,7 @@ function signin(props) {
             <div className="socail-neworks flex justify-center">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-3">
-                  <label htmlFor="exampleInputfirstName" className="form-label w-full text-white md:text-blue-900">
+                  <label htmlFor="exampleInputfirstName" className="form-label font-semibold text-xl w-full text-white md:text-blue-900">
                     Prénom
                   </label>
                   <input
@@ -103,7 +101,7 @@ function signin(props) {
                   <p>{errors.firstName?.message}</p>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="exampleInputLastName" className="form-label w-full text-white md:text-blue-900">
+                  <label htmlFor="exampleInputLastName" className="form-label font-semibold text-xl w-full text-white md:text-blue-900">
                     Nom
                   </label>
                   <input
@@ -115,7 +113,7 @@ function signin(props) {
                   <p className='text-red-500'>{errors.lastName?.message}</p>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="exampleInputEmail1" className="form-label w-full text-white md:text-blue-900">
+                  <label htmlFor="exampleInputEmail1" className="form-label font-semibold text-xl w w-full text-white md:text-blue-900">
                     Email
                   </label>
                   <input
@@ -128,7 +126,7 @@ function signin(props) {
                   <p className='text-red-500'>{errors.userName?.message}</p>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="exampleInputPassword1" className="form-label text-white md:text-blue-900 w-fumm">
+                  <label htmlFor="exampleInputPassword1" className="form-label font-semibold text-xl text-white md:text-blue-900 w-fumm">
                     Mot de passe
                   </label>
                   <input type="password" 

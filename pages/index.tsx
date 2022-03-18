@@ -1,19 +1,20 @@
 import type { NextPage } from 'next';
 import { getSession, signOut, useSession } from 'next-auth/react';
+import { Component } from 'react';
+import AccountLayout from '../layouts/AccountLayout';
 
-const Home: NextPage = () => {
+const Index: NextPage = (props) => {
     const { data: session } = useSession();
     return (
-      <section className="wrapper bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen">
-        {
-          <button onClick={() => signOut()}>Sign out</button>
-        }
+      <section>
+        <div className="banner grid grid-rows-1 grid-cols-4 rounded-lg bg-gradient-to-r from-red-400 to-orange-300 py-10 px-4">
+          <h1 className='capitalize text-white text-3xl'> Bonjour {session?.user?.name?.split(' ')[0]}</h1>
+        </div>
       </section>
     )
 }
 export async function getServerSideProps(context) {
   const session = await getSession(context);
-
   if (!session) {
     return {
       redirect: {
@@ -27,4 +28,4 @@ export async function getServerSideProps(context) {
     props: { session }
   }
 }
-export default Home
+export default Index;
