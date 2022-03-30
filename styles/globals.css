@@ -1,16 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .line-through-text {
-  width: 100%; 
-  text-align: center; 
-  border: 0; 
-  line-height: 0.1em;
-  margin: 10px 0 20px; 
-} 
+    width: 100%;
+    text-align: center;
+    border: 0;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
 
-.line-through-text span { 
-   border: 0; 
-   padding:0 10px; 
+.line-through-text span {
+    border: 0;
+    padding: 0 10px;
+}
+
+.textarea {
+    background-color: #6e0e43;
+    color: #00008b;
+    padding: 1em;
+    border: 2px solid transparent;
+}
+
+.mb-3 {
+    border: 5px solid transparent;
+}
+
+.form-outline {
+    padding: 1em;
+    border: 2px solid transparent;
+}
+
+.form-label {
+    font-style: italic;
+    font-size: large;
+}
+
+.mt-2 {
+    color: #8b2000;
+}
+
+.form-control {
+    color: ;
 }

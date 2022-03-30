@@ -17,7 +17,7 @@ function AccountLayout({ children }) {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/nous-contacter">
                   <a className="py-3 block pl-4 text-xl font-light text-slate-100">Contact</a>
                 </Link>
               </li>

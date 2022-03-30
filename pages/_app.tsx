@@ -6,7 +6,9 @@ import AccountLayout from "../layouts/AccountLayout";
 import '../styles/globals.css';
 config.autoAddCss = false; 
 
+
 function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+
   return (
     <SessionProvider session={session}>
       <AccountLayout>
